@@ -1,0 +1,30 @@
+//
+// Colors
+//
+
+//colors - elements
+$bg-body: #292e33;
+
+$bg-article-list-item: rgba(255, 255, 255, 0.166);
+$bg-article-list-footer: rgb(17, 15, 15);
+
+$bg-comments-list-item: rgba(255, 255, 255, 0.052);
+$bg-border-comment-odd: white;
+$bg-border-comment-even: yellow;
+
+
+//colors - text
+$text-color-primary: rgb(216, 210, 210);
+$text-color-default-white: rgb(255, 255, 255);
+$text-color-default-black: rgb(0, 0, 0);
+
+
+$text-color-logo: rgb(255, 255, 0);
+$text-color-headline: rgb(255, 255, 0);
+
+$text-color-link: rgb(255, 255, 0);
+
+// Typography
+$font-primary: 'Open Sans', sans-serif;
+$default-font-size: 100%;
+$default-line-height: 1.5em;

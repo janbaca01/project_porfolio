@@ -1,0 +1,45 @@
+// Imports
+@import '../variables';
+
+
+//
+// Primary footer
+//
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1em;
+
+    margin-top: 5em !important;
+}
+
+.auth-area {
+    font-size: 0.80em;
+    
+    a {
+        color: $text-color-link;
+        text-decoration: none;
+
+        &:first-child {
+            &::after {
+                content: '\007C';
+                margin: 0 2em !important;
+            }
+        }
+
+        &:hover {
+            color: $text-color-default-white;
+        }
+    }
+}
+
+a.logout-link {
+    color: red;
+}
+
+.copyright {
+    font-size: 0.75em;
+}

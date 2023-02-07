@@ -1,0 +1,36 @@
+// Imports
+@import 'variables';
+
+*, *:before, *:after {
+    margin: 0 !important;
+    padding: 0 !important;
+  
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -ms-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+  }
+
+ul, ol {
+  list-style: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $bg-body !important;
+
+  color: $text-color-primary !important;
+  font-family: $font-primary !important;
+  font-size: $default-font-size !important;
+
+  line-height: $default-line-height;
+}
+
+#app {
+  padding: 5em !important;
+  box-sizing: content-box !important;
+}
+

@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: project_portfolio
+    build:
+      args:
+        user: project_portfolio
+        uid: ${APP_USER_ID}
+      context: ./
+      dockerfile: Dockerfile
+    image: project_portfolio
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./php.ini:/usr/local/etc/php/php.ini
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: project_portfolio_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+      - 33060:33060
+    volumes:
+      - project_portfolio-mysql-volume:/var/lib/mysql
+
+  nginx:
+    image: nginx:latest
+    container_name: project_portfolio_nginx
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./public:/var/www/public
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - app
+    ports:
+      - ${NGINX_PORT}:80
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.1
+    restart: always
+    ports:
+      - ${PHP_MY_ADMIN_PORT}:80
+    environment:
+      PMA_HOST: db
+      PMA_PORT: ${DB_PORT}
+      PMA_USER: ${PMA_USER}
+      PMA_PASSWORD: ${PMA_PASSWORD}
+    depends_on:
+      - db
+
+volumes:
+  project_portfolio-mysql-volume:
+

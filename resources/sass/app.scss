@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+// Variables
+@import 'variables';
+@import 'general';
+@import './partials/header';
+@import './partials/footer';
+@import './partials/article_list';
+@import './partials/comments-list';
+@import './auth/auth_pages';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';

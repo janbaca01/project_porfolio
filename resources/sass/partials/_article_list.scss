@@ -1,0 +1,112 @@
+// Imports
+@import '../variables';
+
+
+//
+// list articles with cards
+//
+
+#article-list {
+    margin-top: 2em !important;
+    
+    ol {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+  }
+  
+  .article-list-headline {
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    font-size: 2em;
+  
+    padding-bottom: .1em !important;
+    border-bottom: .09375em solid yellow;
+
+    a {
+      text-decoration: none;
+      color: $text-color-headline;
+
+      &:hover {
+        color: darken($text-color-headline, 10%);
+      }
+    }
+
+  }
+
+  
+.article-list-item {
+    background-color: $bg-article-list-item;
+    width: 31.333333%;
+    padding: 1% !important;
+  }
+  
+.article-list-content {
+    overflow: hidden;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+
+  .full {
+    height: 100%;
+  }
+
+  .listing {
+    height: 245px;
+  }
+  
+// Footer in card
+
+.article-list-footer {
+    background-color: $bg-article-list-footer;
+    padding: 0.35em !important;
+
+    font-size: 0.85em;
+    font-weight: 100;
+    color: $text-color-default-white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+time {
+    font-style: oblique;
+}
+
+a {
+    color: $text-color-link;
+    text-decoration: none;
+
+    &:hover {
+    color: $text-color-default-white;
+    }
+}
+}
+
+.name-author {
+    &::before {
+      content: '\0040';
+    }
+}
+
+
+
+ // Media query 
+  
+  @media screen and (max-width: 78.75em) {
+    .article-list-item {
+      width: 48%;
+    }
+  }
+  
+  @media screen and (max-width: 61.875em) {
+    .article-list-item {
+      width: 98%;
+    }
+  }

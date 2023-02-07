@@ -1,0 +1,85 @@
+// Imports
+@import '../variables';
+
+
+//
+// logo, welcome text
+//
+
+.site-header {
+    text-align: center;
+  }
+  
+  .title {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: $text-color-logo;
+
+      &:hover {
+        color: darken($text-color-logo, 10%);
+      }
+    }
+  
+  }
+  
+  .welcome-text {
+    padding: .45em 0 0 7em !important;
+  
+    font-size: .72em;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+    font-style: italic;
+
+    &::before {
+      content: '\007C';
+      font-style: normal;
+    }
+  }
+
+
+//
+// Avatar
+//
+
+.fancy-border {
+  position: relative;
+  z-index: -1;
+
+  width: 260px;
+  height: 260px;
+
+  margin: 0 auto !important;
+  margin-top: 2em !important;
+
+  background-color: yellow;
+  border-radius: 67% 33% 53% 47% / 33% 43% 57% 67%;
+
+  span {
+    position: absolute;
+    z-index: 1;
+
+    width: 260px;
+    height: 260px;
+
+    padding: 10px !important;
+    left: -2px;
+    bottom: 2px;
+
+    background-color: red;
+    border-radius: 33% 67% 34% 66% / 59% 47% 53% 41%;
+  }
+
+}
+
+.avatar {
+  width: 240px;
+  height: auto;
+
+  border-radius: 50%;
+
+  filter: grayscale(100%);
+}
