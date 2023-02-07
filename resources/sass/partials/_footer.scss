@@ -23,12 +23,18 @@ footer {
         color: $text-color-link;
         text-decoration: none;
 
-        &:first-child {
+        &:nth-child(2) {
+            color: red;
+        }
+
+        &:nth-child(1) {
             &::after {
                 content: '\007C';
                 margin: 0 2em !important;
             }
         }
+
+        
 
         &:hover {
             color: $text-color-default-white;
@@ -36,9 +42,7 @@ footer {
     }
 }
 
-a.logout-link {
-    color: red;
-}
+
 
 .copyright {
     font-size: 0.75em;

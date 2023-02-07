@@ -34,3 +34,13 @@ body {
   box-sizing: content-box !important;
 }
 
+.error {
+  background-color: rgba(255, 0, 0, 0.432);
+
+  font-size: 1em;
+  font-weight: 600;
+  color: $text-color-headline;
+
+  padding: 1em !important;
+}
+

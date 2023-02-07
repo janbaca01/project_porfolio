@@ -28,6 +28,14 @@ body {
   box-sizing: content-box !important;
 }
 
+.error {
+  background-color: rgba(255, 0, 0, 0.432);
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(255, 255, 0);
+  padding: 1em !important;
+}
+
 .site-header {
   text-align: center;
 }
@@ -102,16 +110,15 @@ footer {
   color: rgb(255, 255, 0);
   text-decoration: none;
 }
-.auth-area a:first-child::after {
+.auth-area a:nth-child(2) {
+  color: red;
+}
+.auth-area a:nth-child(1)::after {
   content: "|";
   margin: 0 2em !important;
 }
 .auth-area a:hover {
   color: rgb(255, 255, 255);
-}
-
-a.logout-link {
-  color: red;
 }
 
 .copyright {
@@ -265,6 +272,65 @@ a.logout-link {
 }
 .comment-footer a:hover {
   color: rgb(255, 255, 255);
+}
+
+.add-comment {
+  margin-bottom: 1em !important;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.container-add-comment h5, .container-add-comment .h5 {
+  padding: 0.4em 0 !important;
+  font-size: 1.25em;
+  line-height: 1.15em;
+  color: rgb(255, 255, 0);
+}
+
+.comment-textarea {
+  width: 100%;
+  min-height: 3em;
+  background-color: rgba(17, 15, 15, 0.348);
+  border: 1px solid rgba(255, 255, 255, 0.052);
+  padding: 0.5em !important;
+  color: rgb(255, 255, 255);
+}
+.comment-textarea:focus {
+  outline: 1px solid yellow !important;
+}
+
+.container-send-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1em !important;
+  padding: 0 1em !important;
+}
+
+.auth-area-comment {
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.15em;
+  color: red;
+}
+.auth-area-comment a {
+  color: rgb(255, 255, 0);
+  text-decoration: none;
+}
+.auth-area-comment a:nth-child(1)::after {
+  content: "|";
+  margin: 0 2em !important;
+}
+.auth-area-comment a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.button-send-comment {
+  background-color: yellow;
+  font-size: 1.05em;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6em !important;
 }
 
 .auth-headline {

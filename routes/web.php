@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
-
-
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +20,16 @@ use App\Http\Controllers\Auth\LoginController;
 
 // auth
 Auth::routes();
-Route::get('/logout', [LoginController::class, 'logout']);
 
 // home
 Route::get('/', [PostController::class, 'index']);
 
 // posts
 Route::resource('posts', PostController::class);
+
+//comments
+Route::resource('comments', CommentController::class)->only([
+    'store', 'update', 'destroy'
+]);
 
 

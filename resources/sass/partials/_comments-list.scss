@@ -56,7 +56,7 @@
 }
 
 .comment-footer {
-    background-color: rgba(17, 15, 15, 0.348);
+    background-color: $bg-comment-footer;
     padding: 0.25em !important;
     margin-top: 0.5em !important;
     font-size: 0.85em;
@@ -83,5 +83,83 @@
     }
 }
 
+//
+// Create comment
+//
 
+.add-comment {
+    margin-bottom: 1em !important;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.container-add-comment {
+    
+    h5 {
+        padding: .4em 0 !important;
+
+        font-size: 1.25em;
+        line-height: 1.15em;
+        color: $text-color-headline;
+    }
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 3em;
+
+    background-color: $bg-comment-textarea;
+    border: 1px solid $bg-comments-list-item;
+
+    padding: 0.5em !important;
+
+    color: $text-color-default-white;
+
+    &:focus {
+        outline: 1px solid yellow !important;
+    }
+}
+
+.container-send-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1em !important;
+
+    padding: 0 1em !important;
+}
+
+.auth-area-comment {
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1.15em;
+    color: red;
+
+    a {
+        color: $text-color-link;
+        text-decoration: none;
+
+        
+        &:nth-child(1) {
+            &::after {
+                content: '\007C';
+                margin: 0 2em !important;
+            }
+        }
+
+        &:hover {
+            color: $text-color-default-white;
+        }
+    }
+}
+
+.button-send-comment {
+    background-color: $bg-button-comment-send;
+    font-size: 1.05em;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: .6em !important;
+}
 
