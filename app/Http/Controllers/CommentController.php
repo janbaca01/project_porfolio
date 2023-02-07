@@ -26,6 +26,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'text' => 'required',
             'post_id' => 'required|integer|exists:posts,id',
@@ -38,7 +39,7 @@ class CommentController extends Controller
         return redirect('/posts/' . $request->post_id . '#comments');
     }
 
-   
+
 
     /**
      * Update the specified resource in storage.
