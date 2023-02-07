@@ -32,11 +32,11 @@ class CommentController extends Controller
             'post_id' => 'required|integer|exists:posts,id',
 
         ]);
-        auth()->user()->comments()->create(
+        $comment = auth()->user()->comments()->create(
             $request->all()
         );
 
-        return redirect('/posts/' . $request->post_id . '#comments');
+        return redirect('/posts/' . $comment->post->slug . '#comments');
     }
 
 

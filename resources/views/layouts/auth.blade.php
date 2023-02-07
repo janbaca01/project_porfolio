@@ -22,10 +22,10 @@
 
         <header class="site-header">
             <h1 class="title logo">
-                <a href="/">Ján Bača</a>
+                <a href="{{ ::HOME }}">Ján Bača</a>
             </h1>
             <p class="welcome-text">ahoj, vítam ťa na mojom portfóliu...</p>
-            
+
             {{-- <div class="fancy-border">
                 <span>
                     <h2 class="auth-headline">Prihlásenie</h2>
@@ -45,6 +45,6 @@
     </div>
 
     @yield('scripts')
-    
+
 </body>
 </html>
