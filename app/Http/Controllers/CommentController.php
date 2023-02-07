@@ -32,6 +32,7 @@ class CommentController extends Controller
             'post_id' => 'required|integer|exists:posts,id',
 
         ]);
+        
         $comment = auth()->user()->comments()->create(
             $request->all()
         );
