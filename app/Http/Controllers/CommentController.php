@@ -28,7 +28,7 @@ class CommentController extends Controller
     {
         $request->validate([
             'text' => 'required',
-            'post_id' => 'required|integer|exists:post,id',
+            'post_id' => 'required|integer|exists:posts,id',
 
         ]);
         auth()->user()->comments()->create(
