@@ -1,4 +1,4 @@
-@include('errors')
+@include('errors.errors')
 
 <form id="comments" class="add-comment" action="/comments" method="POST">
     @csrf
@@ -17,7 +17,7 @@
         @auth
 
         <div class="auth-area-comment">
-            
+
             <p>
                 <a href="/users/{{auth()->user()->id }}">
                     {{ auth()->user()->name }}
@@ -31,7 +31,7 @@
         </button>
 
         <input type="hidden" name="post_id" value="{{ $post->id }}">
-        
+
         @else
 
         <div class="auth-area-comment">
@@ -47,7 +47,7 @@
                 <a href="{{ route('register') }}">Registrovať</a>
                 @endif
             </p>
-        </div>  
+        </div>
 
         @endauth
     </div>

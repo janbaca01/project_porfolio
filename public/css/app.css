@@ -36,6 +36,19 @@ body {
   padding: 1em !important;
 }
 
+.error-page {
+  margin-top: 2em !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: yellow;
+}
+.error-page span {
+  color: red;
+}
+
 .site-header {
   text-align: center;
 }

@@ -4,7 +4,7 @@
 *, *:before, *:after {
     margin: 0 !important;
     padding: 0 !important;
-  
+
     -webkit-box-sizing: border-box !important;
     -moz-box-sizing: border-box !important;
     -ms-box-sizing: border-box !important;
@@ -42,5 +42,21 @@ body {
   color: $text-color-headline;
 
   padding: 1em !important;
+}
+
+.error-page {
+    margin-top: 2em !important;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: 2em;
+    text-transform: uppercase;
+    color: yellow;
+
+    span {
+        color: red;
+    }
 }
 
