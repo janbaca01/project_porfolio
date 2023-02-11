@@ -22,7 +22,7 @@
 
         <header class="site-header">
             <h1 class="title logo">
-                <a href="{{ ::HOME }}">Ján Bača</a>
+                <a href="{{ "/" }}">Ján Bača</a>
             </h1>
             <p class="welcome-text">ahoj, vítam ťa na mojom portfóliu...</p>
 

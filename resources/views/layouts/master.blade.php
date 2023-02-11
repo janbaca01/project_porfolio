@@ -25,7 +25,7 @@
                 <a href="/">Ján Bača</a>
             </h1>
             <p class="welcome-text">ahoj, vítam ťa na svojej webstránke...</p>
-            
+
             <div class="fancy-border">
                 <span>
                     <img src="https://s3-eu-west-1.amazonaws.com/cdn.staffino.com/avatars/afc239c5a8fbc1f4f98a9f44e5ad0daa820030e2db80c1436ae6947ac21978c1.png" alt="Ján Bača" class="avatar">
@@ -34,6 +34,9 @@
         </header>
 
         <main class="primary-content">
+            <flash-message text="Vitaj na stránke ! " ></flash-message>
+
+
             @yield('content')
         </main>
 
@@ -41,10 +44,9 @@
             @yield('footer')
         </aside>
 
-        {{-- <example-component></example-component> --}}
     </div>
 
     @yield('scripts')
-    
+
 </body>
 </html>
