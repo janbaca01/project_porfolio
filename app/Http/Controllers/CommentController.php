@@ -32,12 +32,12 @@ class CommentController extends Controller
             'post_id' => 'required|integer|exists:posts,id',
 
         ]);
-        
+
         $comment = auth()->user()->comments()->create(
             $request->all()
         );
 
-        return redirect('/posts/' . $comment->post->slug . '#comments');
+        return redirect('/posts/' . $comment->post->slug . '#comments')->with('flash', 'Komentár bol pridaný.');
     }
 
 

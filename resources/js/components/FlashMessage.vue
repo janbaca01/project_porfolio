@@ -22,19 +22,21 @@
         },
 
         created() {
-            this.show();
+            if (this.text) {
+                this.show();
+            }
         },
 
         methods: {
             show() {
-                this.visible = true;
+                this.visible = true
 
                 setTimeout(() => this.hide(), 3000);
 
             },
 
             hide() {
-                this.visible = false;
+                this.visible = false
             }
         }
     };

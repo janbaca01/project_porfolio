@@ -34,7 +34,7 @@
         </header>
 
         <main class="primary-content">
-            <flash-message text="Vitaj na stránke ! " ></flash-message>
+            <flash-message text="{{ session('flash') }}" ></flash-message>
 
 
             @yield('content')
